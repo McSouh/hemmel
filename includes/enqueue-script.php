@@ -14,8 +14,10 @@ class EnqueueScript
     // https://developer.wordpress.org/reference/functions/wp_enqueue_style/
     wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+    wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
     // Ajout des scripts
     // https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', null, true);
     wp_enqueue_script('poppers', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', null, true);
     wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', null, true);
   }
