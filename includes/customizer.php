@@ -14,8 +14,8 @@ class MgCustomizer
   // Attention une section ne s'affichera que si elle contient des controls.
   // https://developer.wordpress.org/reference/classes/wp_customize_manager/add_section/
     $wp_customize->add_section('section-color', [
-      'title' => __('Personalisation des couleurs'),
-      'description' => __('Personalisation des couleurs')
+      'title' => __('Personnalisation des couleurs'),
+      'description' => __('Personnalisation des couleurs')
     ]);
   
   // Ajout d'un setting qui contiendra des informations dans la base de donnée sous la clé correspondant à son id (premier paramètre)
@@ -39,6 +39,59 @@ class MgCustomizer
     'settings'   => 'color-primary',
     'transport'   => 'refresh'
 	) ) 
+);
+
+
+
+$wp_customize->add_section('section-carousel', [
+  'title' => __('Personnalisation du carousel'),
+  'description' => __('Personnalisation des images')
+]);
+
+$wp_customize->add_setting('carousel-image-1', [
+  'type' => 'theme_mod'
+]);
+
+$wp_customize->add_control(
+  new WP_Customize_Image_Control(
+      $wp_customize,
+      'carousel1',
+      array(
+          'label'      => __( 'Choisissez l\'image 1', 'theme_name' ),
+          'section'    => 'section-carousel',
+          'settings'   => 'carousel-image-1' 
+      )
+  )
+);
+$wp_customize->add_setting('carousel-image-2', [
+  'type' => 'theme_mod'
+]);
+
+$wp_customize->add_control(
+  new WP_Customize_Image_Control(
+      $wp_customize,
+      'carousel2',
+      array(
+          'label'      => __( 'Choisissez l\'image 2', 'theme_name' ),
+          'section'    => 'section-carousel',
+          'settings'   => 'carousel-image-2'
+      )
+  )
+);
+$wp_customize->add_setting('carousel-image-3', [
+  'type' => 'theme_mod'
+]);
+
+$wp_customize->add_control(
+  new WP_Customize_Image_Control(
+      $wp_customize,
+      'carousel3',
+      array(
+          'label'      => __( 'Choisissez l\'image 3', 'theme_name' ),
+          'section'    => 'section-carousel',
+          'settings'   => 'carousel-image-3'
+      )
+  )
 );
 
 

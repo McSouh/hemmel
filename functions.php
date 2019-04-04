@@ -7,3 +7,5 @@ require_once(INCLUDE_DIR . '/enqueue-script.php');
 require_once(INCLUDE_DIR . '/customizer.php');
 
 require_once(INCLUDE_DIR . '/scss-compiler.php');
+
+require_once(INCLUDE_DIR . '/carousel-image-css.php');

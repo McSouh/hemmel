@@ -16,15 +16,15 @@ function scss_compiler()
         $content = file_get_contents($path . '/scss/main.scss');
 
         $new_content = str_replace($old_value, $new_value, $content);
-        update_option('old_value', $new_value);
-
+        
         file_put_contents($path . '/scss/main.scss', $new_content);
-
+        
         $envee = getenv();
         $envee = "PATH=" . $envee['PATH'];
-
+        
         putenv("PATH=/usr/local/bin");
         shell_exec("sass " . $path . "/scss/main.scss " . $path . "/css/main.css");
+        update_option('old_value', $new_value);
     }
 }
-add_action('wp_head', 'scss_compiler', 0);
+add_action('wp_head', 'scss_compiler', -10);

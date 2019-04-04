@@ -36,14 +36,15 @@
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
-    <button class="btn btn-outline-light my-2 my-sm-0 ml-lg-3" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
+    <button onclick="document.documentElement.querySelector('#searchinput').focus();" class="btn btn-outline-light my-2 my-sm-0 ml-lg-3" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search"></i></button>
   </div>
 </div>
 </nav>
 </header>
 
+
 <!-- Modal Search -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex=""  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body">
@@ -51,13 +52,29 @@
                 <span aria-hidden="true">&times;</span>
               </button>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2 ml-auto w-75" type="search" placeholder="Rechercher" aria-label="Search">
+            <input id="searchinput" class="form-control mr-sm-2 ml-auto w-75" type="search" placeholder="Rechercher" aria-label="Search" autofocus>
             <button class="btn btn-outline-primary my-2 my-sm-0 mr-auto" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- BANNER CAROUSEL -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="bg-primary filter"></div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div id="carousel1"></div>
+        </div>
+        <div class="carousel-item">
+          <div id="carousel2"></div>
+        </div>
+        <div class="carousel-item">
+          <div id="carousel3"></div>
+        </div>
+      </div>
+    </div>
 
   <?php wp_footer() ?>
 
