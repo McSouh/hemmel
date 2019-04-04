@@ -1,4 +1,4 @@
-$primary: #471000;
+$primary: #660f00;
 
 @import "/Applications/MAMP/htdocs/WordpressDevelopper/hemmel/wp-content/themes/hemmel/node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -11,6 +11,7 @@ $fa-font-path: "/Applications/MAMP/htdocs/WordpressDevelopper/hemmel/wp-content/
     bottom: 0 !important;
     top: auto !important;
 }
+
 
 .btn-outline-light{
     &:hover{
@@ -34,5 +35,6 @@ $fa-font-path: "/Applications/MAMP/htdocs/WordpressDevelopper/hemmel/wp-content/
     height: 100vh;
     z-index: 10;
     opacity: 0.3;
+    background-color: $primary;
 }
 

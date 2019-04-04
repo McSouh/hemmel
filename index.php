@@ -18,7 +18,7 @@
   <div class="container">
   <a class="navbar-brand d-none d-lg-flex" href="#">Hemmel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon mb-1"></span> <span class="text-light">Hemmel</span>
+    <span class="navbar-toggler-icon mb-1"></span> <span class="text-light font-wp">Hemmel</span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">

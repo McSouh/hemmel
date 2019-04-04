@@ -14,7 +14,7 @@ class EnqueueScript
     // https://developer.wordpress.org/reference/functions/wp_enqueue_style/
     wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
     wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-    wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
+    wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css', '', get_theme_mod('color-primary'));
     // Ajout des scripts
     // https://developer.wordpress.org/reference/functions/wp_enqueue_script/
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', null, true);

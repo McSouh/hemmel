@@ -21,6 +21,7 @@ class MgCustomizer
   // Ajout d'un setting qui contiendra des informations dans la base de donnée sous la clé correspondant à son id (premier paramètre)
   // https://developer.wordpress.org/reference/classes/wp_customize_manager/add_setting/
     $wp_customize->add_setting('color-primary', [
+      'default' => '#471000',
       'type' => 'theme_mod',
       'transport' => 'refresh',
       'sanitize_callback' => 'sanitize_hex_color'
@@ -92,6 +93,27 @@ $wp_customize->add_control(
           'settings'   => 'carousel-image-3'
       )
   )
+);
+
+
+$wp_customize->add_section('section-font', [
+  'title' => __('Personnalisation de la police d\'écriture'),
+  'description' => __('Personnalisation de la police d\'écriture')
+]);
+
+$wp_customize->add_setting('font', [
+  'type' => 'theme_mod'
+]);
+
+$wp_customize->add_control( 
+	new WP_Customize_Upload_Control( 
+	$wp_customize, 
+	'font-control', 
+	array(
+		'label'      => __( 'Police d\'écriture', 'mytheme' ),
+		'section'    => 'section-font',
+		'settings'   => 'font',
+	) ) 
 );
 
 
